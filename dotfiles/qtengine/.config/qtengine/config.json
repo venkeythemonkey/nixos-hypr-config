@@ -1,0 +1,22 @@
+{
+  "theme": {
+    "colorScheme": "/home/venkatesh/.local/share/color-schemes/noctalia.colors",
+    "iconTheme": "breeze-dark",
+    "style": "breeze",
+    "font": {
+      "family": "Noto Sans",
+      "size": 10,
+      "weight": -1
+    },
+    "fontFixed": {
+      "family": "JetBrainsMono Nerd Font",
+      "size": 10,
+      "weight": -1
+    }
+  },
+  "misc": {
+    "menusHaveIcons": true,
+    "singleClickActivate": false,
+    "shortcutsForContextMenus": true
+  }
+}
