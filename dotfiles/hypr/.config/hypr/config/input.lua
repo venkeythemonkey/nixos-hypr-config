@@ -10,13 +10,23 @@ hl.config({
         kb_options = "",
         kb_rules   = "",
 
+        repeat_rate  = 40,
+        repeat_delay = 250,
         follow_mouse = 1,
 
         sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
 
         touchpad = {
-            natural_scroll = true,
+            tap_to_click         = true,
+            disable_while_typing = true,
+            natural_scroll       = true,
+            scroll_factor        = 0.7,
         },
+    },
+
+    cursor = {
+        inactive_timeout  = 5,
+        hide_on_key_press = true,
     },
 })
 
