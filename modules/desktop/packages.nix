@@ -6,7 +6,6 @@
     grim
     playerctl
     unstable.hyprland-qtutils
-    unstable.hyprpolkitagent
     unstable.kitty
     xdg-user-dirs
   ];
