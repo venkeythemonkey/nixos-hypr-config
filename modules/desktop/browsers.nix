@@ -3,8 +3,8 @@
 {
   programs.firefox.enable = true;
 
-  # Work around missing Firefox UI text with the native Wayland backend.
-  environment.sessionVariables.MOZ_ENABLE_WAYLAND = "0";
+  # Use Firefox's native Wayland backend.
+  environment.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
 
   environment.systemPackages = with pkgs; [
     brave
