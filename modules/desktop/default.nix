@@ -2,7 +2,9 @@
 
 {
   imports = [
+    ./appearance.nix
     ./audio.nix
+    ./browsers.nix
     ./fonts.nix
     ./hyprland.nix
     ./noctalia-greeter.nix

@@ -9,6 +9,7 @@
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.xdg-user-dirs}/bin/xdg-user-dirs-update";
+      ExecStartPost = "${pkgs.coreutils}/bin/mkdir -p %h/Pictures/Screenshots";
     };
   };
 }
