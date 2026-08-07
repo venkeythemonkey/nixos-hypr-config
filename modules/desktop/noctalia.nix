@@ -9,5 +9,6 @@
     enable = true;
     package = pkgs.unstable.noctalia;
     recommendedServices.enable = true;
+    systemd.enable = true;
   };
 }

@@ -8,6 +8,7 @@
     enable = true;
     package = pkgs.unstable.hyprland;
     portalPackage = pkgs.unstable.xdg-desktop-portal-hyprland;
+    withUWSM = true;
   };
 
   programs.hyprlock = {
@@ -20,6 +21,9 @@
     package = pkgs.unstable.hypridle;
   };
 
-  # Install the upstream user unit; Hyprland starts it with the session.
+  # Install the upstream user unit and start it with the graphical session.
   systemd.packages = [ pkgs.unstable.hyprpolkitagent ];
+  systemd.user.services.hyprpolkitagent.wantedBy = [
+    "graphical-session.target"
+  ];
 }

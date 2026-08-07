@@ -3,7 +3,7 @@
 let
   package = pkgs.unstable.noctalia-greeter;
   settings = (pkgs.formats.toml { }).generate "greeter.toml" {
-    session.default = "Hyprland";
+    session.default = "Hyprland (uwsm-managed)";
     user.default = "venkatesh";
     output.scale = 1.0;
   };
