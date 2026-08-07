@@ -30,6 +30,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"), { description = "Toggle
 -- Take an interactive screenshot
 hl.bind("Print",         hl.dsp.exec_cmd(programs.screenshotRegion), { description = "Capture screen region" })
 hl.bind("SHIFT + Print", hl.dsp.exec_cmd(programs.screenshotFull),   { description = "Capture a monitor" })
+hl.bind(mainMod .. " + CTRL + Print", hl.dsp.exec_cmd(programs.captureText), { description = "Copy text from screen region" })
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }),  { description = "Focus left" })
