@@ -1,35 +1,34 @@
 { lib, pkgs, ... }:
 
 let
-  imageMimeTypes = [
-    "image/gif"
-    "image/jpeg"
-    "image/png"
-    "image/webp"
-  ];
+  gnomeMimeDefaults = {
+    "application/pdf" = "org.gnome.Papers.desktop";
+    "image/gif" = "org.gnome.Loupe.desktop";
+    "image/jpeg" = "org.gnome.Loupe.desktop";
+    "image/png" = "org.gnome.Loupe.desktop";
+    "image/webp" = "org.gnome.Loupe.desktop";
+    "inode/directory" = "org.gnome.Nautilus.desktop";
+  };
 
-  setImageMimeDefaults = pkgs.writeShellScript "set-image-mime-defaults" ''
-    set -eu
-
-    for mimeType in ${lib.escapeShellArgs imageMimeTypes}; do
-      ${pkgs.xdg-utils}/bin/xdg-mime default org.kde.gwenview.desktop "$mimeType"
-    done
-
-    ${pkgs.kdePackages.kservice}/bin/kbuildsycoca6 --noincremental
-  '';
-in
-{
-  xdg.mime.defaultApplications = {
-    "application/pdf" = "org.kde.okular.desktop";
-    "image/gif" = "org.kde.gwenview.desktop";
-    "image/jpeg" = "org.kde.gwenview.desktop";
-    "image/png" = "org.kde.gwenview.desktop";
-    "image/webp" = "org.kde.gwenview.desktop";
-    "inode/directory" = "org.kde.dolphin.desktop";
+  browserMimeDefaults = {
     "text/html" = "firefox.desktop";
     "x-scheme-handler/http" = "firefox.desktop";
     "x-scheme-handler/https" = "firefox.desktop";
   };
+
+  setUserMimeDefaults = pkgs.writeShellScript "set-user-mime-defaults" ''
+    set -eu
+
+    ${lib.concatStringsSep "\n" (
+      lib.mapAttrsToList (
+        mimeType: desktopFile:
+        "${pkgs.xdg-utils}/bin/xdg-mime default ${lib.escapeShellArg desktopFile} ${lib.escapeShellArg mimeType}"
+      ) gnomeMimeDefaults
+    )}
+  '';
+in
+{
+  xdg.mime.defaultApplications = gnomeMimeDefaults // browserMimeDefaults;
 
   systemd.user.services.xdg-user-dirs = {
     description = "Create XDG user directories";
@@ -43,14 +42,14 @@ in
     };
   };
 
-  # Keep KDE's user-level application database aligned with the system defaults.
-  systemd.user.services.xdg-image-mime-defaults = {
-    description = "Set image MIME defaults for KDE applications";
+  # Keep the user's application database aligned without replacing unrelated entries.
+  systemd.user.services.xdg-mime-defaults = {
+    description = "Set user MIME defaults";
     wantedBy = [ "default.target" ];
 
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = setImageMimeDefaults;
+      ExecStart = setUserMimeDefaults;
     };
   };
 }

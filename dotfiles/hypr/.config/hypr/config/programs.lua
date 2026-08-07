@@ -1,6 +1,6 @@
 return {
     terminal           = "uwsm app -- kitty",
-    fileManager        = "uwsm app -- dolphin",
+    fileManager        = "uwsm app -- nautilus",
     appLauncher        = "noctalia msg panel-toggle launcher",
     clipboard          = "noctalia msg panel-toggle clipboard",
     windowSwitcher     = "noctalia msg window-switcher",

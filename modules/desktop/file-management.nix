@@ -1,15 +1,14 @@
 { pkgs, ... }:
 
 {
-  # Let desktop applications discover and mount removable storage through Polkit.
+  # Let desktop applications discover and mount local and remote storage.
+  services.gvfs.enable = true;
   services.udisks2.enable = true;
 
-  environment.systemPackages = with pkgs.kdePackages; [
-    ark
-    dolphin
-    ffmpegthumbs
-    gwenview
-    kdegraphics-thumbnailers
-    okular
+  environment.systemPackages = with pkgs; [
+    file-roller
+    loupe
+    nautilus
+    papers
   ];
 }
