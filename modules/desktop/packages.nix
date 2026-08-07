@@ -10,7 +10,6 @@
     playerctl
     unstable.hyprland-qtutils
     unstable.hyprpolkitagent
-    unstable.hyprshutdown
     unstable.kitty
     xdg-user-dirs
   ];
