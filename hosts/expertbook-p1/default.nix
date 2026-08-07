@@ -9,11 +9,13 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/boot.nix
+      ../../modules/fish.nix
       ../../modules/fonts.nix
       ../../modules/locale.nix
       ../../modules/networking.nix
       ../../modules/nix.nix
       ../../modules/packages.nix
+      ../../modules/unstable.nix
       ../../modules/users.nix
     ];
 
