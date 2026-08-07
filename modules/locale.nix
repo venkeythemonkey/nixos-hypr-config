@@ -5,7 +5,9 @@
   time.timeZone = "Asia/Kolkata";
 
   # Select internationalisation properties.
-  i18n.defaultLocale = "en_IN";
+  # en_IN has no UTF-8-suffixed locale name in glibc's supported list, so use
+  # an explicit UTF-8 language locale and retain Indian regional formats below.
+  i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_IN";
