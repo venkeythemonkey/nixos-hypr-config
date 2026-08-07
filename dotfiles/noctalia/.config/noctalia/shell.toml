@@ -1,6 +1,9 @@
 [storage]
 key_source = "secret-service"
 
+[hooks]
+battery_percentage_changed = "NOCTALIA_BATTERY_THRESHOLD=20 ~/.config/noctalia/hooks/battery-threshold.sh"
+
 [shell]
 launch_apps_as_systemd_services = true
 clipboard_enabled = true
