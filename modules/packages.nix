@@ -8,6 +8,7 @@
     wget
     git
     bubblewrap
+    brightnessctl
     unstable.kitty
   ];
 

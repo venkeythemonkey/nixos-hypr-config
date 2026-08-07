@@ -8,9 +8,11 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/audio.nix
       ../../modules/boot.nix
       ../../modules/fish.nix
       ../../modules/fonts.nix
+      ../../modules/hyprland.nix
       ../../modules/locale.nix
       ../../modules/networking.nix
       ../../modules/nix.nix
