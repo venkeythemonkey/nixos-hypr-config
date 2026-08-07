@@ -6,12 +6,40 @@
 -- Please note permission changes here require a Hyprland restart and are not applied on-the-fly
 -- for security reasons
 
--- hl.config({
---   ecosystem = {
---     enforce_permissions = true,
---   },
--- })
+hl.config({
+    ecosystem = {
+        enforce_permissions = true,
+    },
+})
 
 -- hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 -- hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencopy", "allow")
 -- hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
+
+-- NixOS binaries live in versioned store paths, so these rules match the
+-- trusted package executables across normal package upgrades.
+hl.permission({
+    binary = "/nix/store/[a-z0-9]{32}-grim-[0-9.]*/bin/grim",
+    type   = "screencopy",
+    mode   = "allow",
+})
+hl.permission({
+    binary = "/nix/store/[a-z0-9]{32}-hyprlock-[0-9.]*/bin/hyprlock",
+    type   = "screencopy",
+    mode   = "allow",
+})
+hl.permission({
+    binary = "/nix/store/[a-z0-9]{32}-noctalia-[^/]*/bin/[.]noctalia-wrapped",
+    type   = "screencopy",
+    mode   = "allow",
+})
+hl.permission({
+    binary = "/nix/store/[a-z0-9]{32}-noctalia-[^/]*/bin/[.]noctalia-wrapped",
+    type   = "cursorpos",
+    mode   = "allow",
+})
+hl.permission({
+    binary = "/nix/store/[a-z0-9]{32}-xdg-desktop-portal-hyprland-[0-9.]*/libexec/[.]xdg-desktop-portal-hyprland-wrapped",
+    type   = "screencopy",
+    mode   = "allow",
+})

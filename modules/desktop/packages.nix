@@ -8,6 +8,7 @@
     kdePackages.gwenview
     kdePackages.okular
     playerctl
+    unstable.hyprland-qtutils
     unstable.hyprpolkitagent
     unstable.hyprshutdown
     unstable.kitty
