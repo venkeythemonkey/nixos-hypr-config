@@ -2,6 +2,8 @@
 ---- WINDOWS AND WORKSPACES ----
 --------------------------------
 
+local programs = require("config/programs")
+
 -- See https://wiki.hypr.land/Configuring/Basics/Window-Rules/
 -- and https://wiki.hypr.land/Configuring/Basics/Workspace-Rules/
 
@@ -54,4 +56,9 @@ hl.window_rule({
 
     move  = "20 monitor_h-120",
     float = true,
+})
+
+hl.workspace_rule({
+    workspace        = "special:terminal",
+    on_created_empty = programs.terminal,
 })
