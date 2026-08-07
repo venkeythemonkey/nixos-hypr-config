@@ -37,6 +37,7 @@ end = [
   "temp",
   "brightness",
   "battery",
+  "clipboard",
   "tray",
   "session",
 ]
