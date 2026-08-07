@@ -28,6 +28,7 @@ start = ["workspaces", "active_window"]
 center = ["clock"]
 end = [
   "caffeine",
+  "privacy",
   "output_volume",
   "input_volume",
   "network",
@@ -71,6 +72,10 @@ font_weight = 700
 
 [widget.caffeine]
 color = "secondary"
+
+[widget.privacy]
+hide_inactive = true
+icon_spacing = 6
 
 [widget.output_volume]
 type = "volume"
