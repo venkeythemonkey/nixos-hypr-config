@@ -23,6 +23,7 @@ hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(programs.clipboard))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SPACE", hl.dsp.exec_cmd(programs.appLauncher))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd(programs.windowSwitcher))
+hl.bind(mainMod .. " + grave", hl.dsp.focus({ workspace = "previous" }))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
