@@ -5,6 +5,34 @@ key_source = "secret-service"
 launch_apps_as_systemd_services = true
 clipboard_enabled = true
 
+[shell.session]
+grid = false
+grid_columns = 3
+show_shortcuts = true
+
+[[shell.session.actions]]
+action = "command"
+label = "Lock"
+glyph = "lock"
+command = "pidof hyprlock || hyprlock"
+shortcut = "1"
+
+[[shell.session.actions]]
+action = "logout"
+shortcut = "2"
+
+[[shell.session.actions]]
+action = "suspend"
+shortcut = "3"
+
+[[shell.session.actions]]
+action = "reboot"
+shortcut = "4"
+
+[[shell.session.actions]]
+action = "shutdown"
+shortcut = "5"
+
 [shell.screenshot]
 save_to_file = true
 directory = "~/Pictures/Screenshots"
