@@ -32,6 +32,7 @@ end = [
   "output_volume",
   "input_volume",
   "network",
+  "bluetooth",
   "power_profile",
   "cpu",
   "ram",
@@ -91,6 +92,10 @@ show_label = true
 [widget.network]
 show_label = true
 color = "secondary"
+
+[widget.bluetooth]
+show_label = false
+hide_when_no_connected_device = true
 
 [widget.power_profile]
 color = "primary"
