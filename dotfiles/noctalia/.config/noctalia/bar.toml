@@ -39,6 +39,7 @@ end = [
   "brightness",
   "battery",
   "clipboard",
+  "notifications",
   "tray",
   "session",
 ]
@@ -127,6 +128,9 @@ display_mode = "glyph"
 show_label = true
 label_content = "percent"
 color = "tertiary"
+
+[widget.notifications]
+hide_when_no_unread = true
 
 [widget.tray]
 match_adjacent_spacing = true
