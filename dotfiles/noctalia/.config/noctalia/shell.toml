@@ -1,5 +1,17 @@
 [shell]
 launch_apps_as_systemd_services = true
+clipboard_enabled = true
+
+[shell.screenshot]
+save_to_file = true
+directory = "~/Pictures/Screenshots"
+filename_pattern = "Screenshot_%Y-%m-%d_%H-%M-%S"
+copy_to_clipboard = true
+freeze_screen = true
+confirm_region = false
+show_cursor = false
+pipe_to_command = false
+pipe_command = ""
 
 [theme.templates]
 enable_builtin_templates = true

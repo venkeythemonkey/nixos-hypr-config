@@ -26,7 +26,8 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 
 -- Take an interactive screenshot
-hl.bind("Print", hl.dsp.exec_cmd(programs.screenshot))
+hl.bind("Print",         hl.dsp.exec_cmd(programs.screenshotRegion))
+hl.bind("SHIFT + Print", hl.dsp.exec_cmd(programs.screenshotFull))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))
