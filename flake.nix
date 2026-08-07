@@ -5,7 +5,7 @@
 
   outputs = { nixpkgs, ... }: {
     nixosConfigurations.expertbook-p1 = nixpkgs.lib.nixosSystem {
-      modules = [ ./configuration.nix ];
+      modules = [ ./hosts/expertbook-p1 ];
     };
   };
 }
