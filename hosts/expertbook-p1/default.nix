@@ -9,12 +9,16 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/boot.nix
+      ../../modules/compatibility.nix
+      ../../modules/containers.nix
       ../../modules/desktop
       ../../modules/fish.nix
+      ../../modules/laptop.nix
       ../../modules/locale.nix
       ../../modules/networking.nix
       ../../modules/nix.nix
       ../../modules/packages/system.nix
+      ../../modules/storage.nix
       ../../modules/stow.nix
       ../../modules/unstable.nix
       ../../modules/users.nix

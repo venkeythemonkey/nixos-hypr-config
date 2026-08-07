@@ -10,5 +10,11 @@
   programs.nh = {
     enable = true;
     flake = "/home/venkatesh/nixos-hypr-config";
+
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--keep 3 --keep-since 7d";
+    };
   };
 }
