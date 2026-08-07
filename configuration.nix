@@ -62,6 +62,14 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable the modern Nix CLI and flakes.
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  programs.nh = {
+    enable = true;
+    flake = "/home/venkatesh/nixos-hypr-config";
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
