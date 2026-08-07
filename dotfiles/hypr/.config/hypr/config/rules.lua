@@ -31,6 +31,14 @@ hl.window_rule({
     no_focus = true,
 })
 
+hl.window_rule({
+    -- Keep the session awake while a game, video, or presentation is fullscreen.
+    name  = "fullscreen-idle-inhibit",
+    match = { class = ".*" },
+
+    idle_inhibit = "fullscreen",
+})
+
 -- Layer rules also return a handle.
 -- local overlayLayerRule = hl.layer_rule({
 --     name  = "no-anim-overlay",
