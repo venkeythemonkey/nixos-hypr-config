@@ -88,3 +88,26 @@ hl.window_rule({
     match    = { float = false, workspace = "f[1]s[false]" },
     rounding = 0,
 })
+
+hl.window_rule({
+    -- Keep Firefox Picture-in-Picture visible in the lower-right corner.
+    name  = "firefox-picture-in-picture",
+    match = {
+        class         = "^firefox$",
+        initial_title = "^Picture-in-Picture$",
+    },
+
+    float             = true,
+    pin               = true,
+    keep_aspect_ratio = true,
+    size              = { "(monitor_w*0.25)", "(monitor_h*0.25)" },
+    move              = { "(monitor_w-window_w-24)", "(monitor_h-window_h-24)" },
+})
+
+hl.window_rule({
+    -- Center application confirmation and settings dialogs.
+    name   = "center-modal-dialogs",
+    match  = { modal = true },
+    float  = true,
+    center = true,
+})
