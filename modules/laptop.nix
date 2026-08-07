@@ -15,5 +15,8 @@
   services.fprintd.enable = true;
   services.power-profiles-daemon.enable = true;
 
-  security.pam.services.sudo.fprintAuth = true;
+  security.pam.services = {
+    greetd.fprintAuth = false;
+    sudo.fprintAuth = true;
+  };
 }
