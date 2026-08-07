@@ -5,6 +5,7 @@
     ./appearance.nix
     ./audio.nix
     ./browsers.nix
+    ./file-management.nix
     ./fonts.nix
     ./hyprland.nix
     ./hyprland-lua-check.nix
