@@ -38,6 +38,7 @@ in
     wantedBy = [ "default.target" ];
     requires = [ "xdg-user-dirs.service" ];
     after = [ "xdg-user-dirs.service" ];
+    restartTriggers = [ ../dotfiles ];
 
     unitConfig.ConditionPathExists = "%h/nixos-hypr-config/dotfiles";
 
