@@ -62,3 +62,29 @@ hl.workspace_rule({
     workspace        = "special:terminal",
     on_created_empty = programs.terminal,
 })
+
+-- Smart gaps for single tiled windows and maximized workspaces.
+-- Special workspaces retain their normal gaps and decoration.
+hl.workspace_rule({ workspace = "w[tv1]s[false]", gaps_out = 0, gaps_in = 0 })
+hl.workspace_rule({ workspace = "f[1]s[false]", gaps_out = 0, gaps_in = 0 })
+
+hl.window_rule({
+    name        = "smart-gaps-single-border",
+    match       = { float = false, workspace = "w[tv1]s[false]" },
+    border_size = 0,
+})
+hl.window_rule({
+    name     = "smart-gaps-single-rounding",
+    match    = { float = false, workspace = "w[tv1]s[false]" },
+    rounding = 0,
+})
+hl.window_rule({
+    name        = "smart-gaps-maximized-border",
+    match       = { float = false, workspace = "f[1]s[false]" },
+    border_size = 0,
+})
+hl.window_rule({
+    name     = "smart-gaps-maximized-rounding",
+    match    = { float = false, workspace = "f[1]s[false]" },
+    rounding = 0,
+})
