@@ -8,15 +8,14 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/audio.nix
       ../../modules/boot.nix
+      ../../modules/desktop
       ../../modules/fish.nix
-      ../../modules/fonts.nix
-      ../../modules/hyprland.nix
       ../../modules/locale.nix
       ../../modules/networking.nix
       ../../modules/nix.nix
-      ../../modules/packages.nix
+      ../../modules/packages/system.nix
+      ../../modules/stow.nix
       ../../modules/unstable.nix
       ../../modules/users.nix
     ];

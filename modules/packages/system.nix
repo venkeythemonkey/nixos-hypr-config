@@ -8,8 +8,7 @@
     wget
     git
     bubblewrap
-    brightnessctl
-    unstable.kitty
+    stow
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
