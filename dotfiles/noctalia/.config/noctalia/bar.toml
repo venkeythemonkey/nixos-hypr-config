@@ -6,22 +6,22 @@ position = "top"
 enabled = true
 reserve_space = true
 layer = "top"
-thickness = 36
-background_opacity = 1.0
+thickness = 40
+background_opacity = 0.95
 border_width = 0.0
-shadow = false
+shadow = true
 concave_edge_corners = false
 radius = 0
 radius_top_left = 0
 radius_top_right = 0
-radius_bottom_left = 0
-radius_bottom_right = 0
+radius_bottom_left = 10
+radius_bottom_right = 10
 margin_ends = 0
 margin_edge = 0
-padding = 12
-widget_spacing = 20
+padding = 14
+widget_spacing = 12
 font_family = "JetBrainsMono Nerd Font"
-font_weight = 500
+font_weight = 400
 scale = 1.1
 capsule = false
 start = ["workspaces", "active_window"]
@@ -51,8 +51,8 @@ display = "id"
 max_label_chars = 2
 labels_only_when_occupied = false
 hide_when_empty = false
-active_pill_size = 2.2
-inactive_pill_size = 1.0
+active_pill_size = 2.8
+inactive_pill_size = 1.4
 focused_color = "primary"
 occupied_color = "secondary"
 empty_color = "surface_variant"
@@ -60,8 +60,8 @@ urgent_color = "error"
 
 [widget.active_window]
 display = "text_only"
-min_length = 80
-max_length = 260
+min_length = 40
+max_length = 180
 title_scroll = "none"
 show_empty_label = false
 color = "primary"
@@ -70,7 +70,7 @@ color = "primary"
 format = "{:%-I:%M %p}"
 tooltip_format = "{:%A, %B %d, %Y}"
 color = "primary"
-font_weight = 700
+font_weight = 800
 
 [widget.caffeine]
 color = "secondary"
@@ -87,7 +87,7 @@ show_label = true
 [widget.input_volume]
 type = "volume"
 device = "input"
-show_label = true
+show_label = false
 
 [widget.network]
 show_label = true
@@ -105,7 +105,7 @@ type = "sysmon"
 stat = "cpu_usage"
 display = "text"
 show_label = true
-label_show_units = true
+label_show_units = false
 color = "primary"
 
 [widget.ram]
@@ -113,7 +113,7 @@ type = "sysmon"
 stat = "ram_pct"
 display = "text"
 show_label = true
-label_show_units = true
+label_show_units = false
 color = "tertiary"
 
 [widget.temp]
@@ -121,7 +121,7 @@ type = "sysmon"
 stat = "cpu_temp"
 display = "text"
 show_label = true
-label_show_units = true
+label_show_units = false
 color = "error"
 
 [widget.brightness]
