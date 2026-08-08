@@ -22,7 +22,7 @@
     bat
     eza
     fd
-    du-dust
+    dust
     yazi
     trash-cli
     tealdeer
