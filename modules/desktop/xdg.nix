@@ -23,7 +23,7 @@ let
       lib.mapAttrsToList (
         mimeType: desktopFile:
         "${pkgs.xdg-utils}/bin/xdg-mime default ${lib.escapeShellArg desktopFile} ${lib.escapeShellArg mimeType}"
-      ) gnomeMimeDefaults
+      ) (gnomeMimeDefaults // browserMimeDefaults)
     )}
   '';
 in

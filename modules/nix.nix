@@ -1,4 +1,4 @@
-{ ... }:
+{ config, username, ... }:
 
 {
   # Allow unfree packages
@@ -9,7 +9,7 @@
 
   programs.nh = {
     enable = true;
-    flake = "/home/venkatesh/nixos-hypr-config";
+    flake = "${config.users.users.${username}.home}/nixos-hypr-config";
 
     clean = {
       enable = true;
