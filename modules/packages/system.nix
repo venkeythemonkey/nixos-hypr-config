@@ -19,6 +19,8 @@
     file
     curl
     unzip
+    bat
+    eza
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

@@ -111,3 +111,13 @@ hl.window_rule({
     float  = true,
     center = true,
 })
+
+hl.window_rule({
+    -- Float and center utility and settings applications
+    name   = "float-utility-apps",
+    match  = {
+        class = "^(org.gnome.Calculator|org.gnome.DiskUtility|org.gnome.FileRoller|file-roller|pavucontrol|org.pulseaudio.pavucontrol|blueman-manager|nm-connection-editor)$",
+    },
+    float  = true,
+    center = true,
+})
