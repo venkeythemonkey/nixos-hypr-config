@@ -17,6 +17,7 @@
 
   security.pam.services = {
     greetd.fprintAuth = false;
+    hyprlock.fprintAuth = false;
     sudo.fprintAuth = true;
   };
 }
