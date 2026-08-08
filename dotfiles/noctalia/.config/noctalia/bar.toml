@@ -27,18 +27,18 @@ capsule = false
 start = ["workspaces", "active_window"]
 center = ["clock"]
 end = [
-  "caffeine",
-  "privacy",
-  "output_volume",
-  "input_volume",
-  "network",
-  "bluetooth",
-  "power_profile",
   "cpu",
   "ram",
   "temp",
+  "network",
+  "bluetooth",
   "brightness",
+  "output_volume",
+  "input_volume",
   "battery",
+  "power_profile",
+  "caffeine",
+  "privacy",
   "clipboard",
   "notifications",
   "tray",
@@ -72,34 +72,6 @@ tooltip_format = "{:%A, %B %d, %Y}"
 color = "primary"
 font_weight = 800
 
-[widget.caffeine]
-color = "secondary"
-
-[widget.privacy]
-hide_inactive = true
-icon_spacing = 6
-
-[widget.output_volume]
-type = "volume"
-device = "output"
-show_label = true
-
-[widget.input_volume]
-type = "volume"
-device = "input"
-show_label = false
-
-[widget.network]
-show_label = true
-color = "secondary"
-
-[widget.bluetooth]
-show_label = false
-hide_when_no_connected_device = true
-
-[widget.power_profile]
-color = "primary"
-
 [widget.cpu]
 type = "sysmon"
 stat = "cpu_usage"
@@ -114,7 +86,7 @@ stat = "ram_pct"
 display = "text"
 show_label = true
 label_show_units = false
-color = "tertiary"
+color = "primary"
 
 [widget.temp]
 type = "sysmon"
@@ -122,17 +94,47 @@ stat = "cpu_temp"
 display = "text"
 show_label = true
 label_show_units = false
-color = "error"
+color = "primary"
+
+[widget.network]
+show_label = true
+color = "primary"
+
+[widget.bluetooth]
+show_label = false
+hide_when_no_connected_device = true
 
 [widget.brightness]
 show_label = true
-color = "secondary"
+color = "primary"
+
+[widget.output_volume]
+type = "volume"
+device = "output"
+show_label = true
+color = "primary"
+
+[widget.input_volume]
+type = "volume"
+device = "input"
+show_label = false
+color = "primary"
 
 [widget.battery]
 display_mode = "glyph"
 show_label = true
 label_content = "percent"
-color = "tertiary"
+color = "primary"
+
+[widget.power_profile]
+color = "primary"
+
+[widget.caffeine]
+color = "primary"
+
+[widget.privacy]
+hide_inactive = true
+icon_spacing = 6
 
 [widget.notifications]
 hide_when_no_unread = true
@@ -141,4 +143,5 @@ hide_when_no_unread = true
 match_adjacent_spacing = true
 
 [widget.session]
-color = "error"
+color = "primary"
+
