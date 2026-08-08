@@ -21,6 +21,11 @@
     unzip
     bat
     eza
+    fd
+    du-dust
+    yazi
+    trash-cli
+    tealdeer
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

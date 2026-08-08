@@ -11,3 +11,7 @@ end
 if command -q bat
     alias cat="bat --paging=never"
 end
+
+if command -q yazi
+    alias y="yazi"
+end
