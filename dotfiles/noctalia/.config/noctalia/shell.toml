@@ -8,6 +8,12 @@ battery_percentage_changed = "NOCTALIA_BATTERY_THRESHOLD=20 ~/.config/noctalia/h
 launch_apps_as_systemd_services = true
 clipboard_enabled = true
 polkit_agent = true
+corner_radius_scale = 0.0
+popup_shadows = false
+
+[shell.panel]
+shadow = false
+transparency_mode = "solid"
 
 [shell.session]
 grid = false
