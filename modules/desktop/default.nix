@@ -7,6 +7,7 @@
     ./browsers.nix
     ./file-management.nix
     ./fonts.nix
+    ./hardware-accel.nix
     ./hyprland.nix
     ./hyprland-lua-check.nix
     ./keyring.nix
