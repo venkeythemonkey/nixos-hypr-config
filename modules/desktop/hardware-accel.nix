@@ -5,7 +5,6 @@
   # Required for Wayland compositors, VA-API, and 32-bit game support.
   hardware.graphics = {
     enable = true;
-    enable32Bit = true;                # Needed for Steam, Wine, and 32-bit apps
 
     extraPackages = with pkgs; [
       # Intel iHD VA-API driver — enables hardware video decode/encode for
