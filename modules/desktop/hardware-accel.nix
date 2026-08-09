@@ -11,14 +11,11 @@
       # H.264, H.265/HEVC, VP8, VP9, AV1 on Raptor Lake-P (i915 + HuC).
       intel-media-driver
 
-      # Mesa-based VAAPI backend (fallback for older Intel GPUs via Iris).
-      mesa.drivers
+      # Mesa VA-API backend (fallback via Iris for older workloads).
+      mesa
 
       # VA-API over Vulkan bridge — lets Vulkan-capable apps use VA-API.
       libvdpau-va-gl
-
-      # Intel media SDK / oneVPL for hardware video processing.
-      intel-media-sdk
     ];
   };
 
